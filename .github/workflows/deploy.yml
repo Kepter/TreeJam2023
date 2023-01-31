@@ -1,6 +1,6 @@
 name: Action Build
 
-on: [pull_request]
+on: [push]
 
 jobs:
   build:
@@ -36,3 +36,8 @@ jobs:
         with:
           name: Build
           path: build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
