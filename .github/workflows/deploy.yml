@@ -36,7 +36,11 @@ jobs:
         with:
           name: Build
           path: build
-
+  deploy:
+    name: Deploy the project
+    runs-on: ubuntu-latest
+    steps:
+      # Deploy
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
